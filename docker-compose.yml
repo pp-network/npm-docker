@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  fronttest:
+    build:
+      dockerfile: dockerfiles/front.dockerfile
+    container_name: front_test
+    ports:
+      - "3000:8080"
+    volumes:
+      - ./front:/usr/src/app/front
+    tty: true
+    
